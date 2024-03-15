@@ -1,3 +1,5 @@
+Install Rust without microsoft 2017,2022 etc
+
 Install studff = https://www.msys2.org/
 step one
 ```
