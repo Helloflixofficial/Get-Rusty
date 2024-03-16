@@ -7,3 +7,15 @@ fn main() {
     }
      println!("value x = {}  value y is {}", x, y);
 }
+
+//scope
+fn main(){
+    define_Data();
+}
+
+
+
+fn define_Data(){
+   let  x : i32 = 100;
+    println!("The data is {}", x);
+}
