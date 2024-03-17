@@ -46,3 +46,15 @@ fn main() {
     assert_eq!(x, 100);
     let x = 50;
 }
+
+//way
+fn main() {
+    let (a, ..) = (4, 6, 8, 2, 3, 4);
+    let (.., y) = (4, 6, 8, 2, 3, 4);
+    let (.., z) = (6, 5, 4, 3, 2, 1);
+    println!("the value of a {}", a);
+    println!("the value of y {}", y);
+    println!("the value of  z {}", z);
+    assert_eq!([a, y, z], [4, 4, 1]);
+    println!("successss");
+}
