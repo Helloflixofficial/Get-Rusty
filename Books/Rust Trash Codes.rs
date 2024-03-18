@@ -58,3 +58,16 @@ fn main() {
     assert_eq!([a, y, z], [4, 4, 1]);
     println!("successss");
 }
+//var
+fn main() {
+    let fan = "Bank of India";
+    let Credit = "800";
+    let acount_active = true;
+    println!("my current portfolio is hadle by {}", fan);
+    println!("my current craddit score is {}", Credit);
+    println!("my Active account {}", acount_active);
+    let switch = true;
+    let volume = 10;
+    println!("lucnh mode is {}", switch);
+    println!("current fual level {}", volume);
+}
