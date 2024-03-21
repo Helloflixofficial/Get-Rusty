@@ -71,3 +71,13 @@ fn main() {
     println!("lucnh mode is {}", switch);
     println!("current fual level {}", volume);
 }
+
+
+fn main() {
+    println!(" {} My age is", 23);
+    println!(" {user1} {action} {user2}",
+    user1 = "shamaji",
+    user2 = "varmaji",
+   action = "krate kids",)
+   println!("{x} {y} {A} {B}", x=10, y=20, A="hello,sire", B="namaste,Sire");
+}
