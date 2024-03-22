@@ -81,3 +81,26 @@ fn main() {
    action = "krate kids",)
    println!("{x} {y} {A} {B}", x=10, y=20, A="hello,sire", B="namaste,Sire");
 }
+
+
+
+fn main() {
+
+    let total = 4; // i32 by default
+    let height:u32 = 41;
+    let deduction:i32 = 2-200;
+    println!("the total is {}",total);
+    println!("the height is {} and the deduction is {}",height,deduction);
+    
+    // Solution
+       let time:u16 = 65535;
+
+   // 0 to 255 only allowed for u8
+   let overtime_1:u16 = 65536;   //overflow value is 0
+   let overtime_2:u16 = 65537;   //overflow value is 1
+
+   println!("time {} ",time);
+   println!("overflow value 1 is {}",overtime_1);
+   println!("overflow value 2 {}",overtime_2);
+}
+
