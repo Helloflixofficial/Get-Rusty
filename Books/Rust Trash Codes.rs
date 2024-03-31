@@ -104,3 +104,24 @@ fn main() {
    println!("overflow value 2 {}",overtime_2);
 }
 
+
+fn main() {
+    //  let greeting = "hello,sire!";
+    //  println!("{}",greeting)
+    let bank: &str = "city bank";
+    let curruncy: &str = "bit Coin";
+    println!("This is a bank {}  & This is a Coin {}", bank, curruncy);
+
+     //  println!("{}",greeting)
+    let bank2:&'static str = "Blue eyes";
+    let curruncy2:&'static str = "Ton Coin";
+
+    println!("This is a bank {}  & This is a Coin {}", bank2, curruncy2);
+
+}
+
+// string litreals are statics  By defults . this ensure that string is valid
+//for entaire duration  of the program  . you can explicitly declare the string  as stastic
+
+
+
