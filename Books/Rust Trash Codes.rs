@@ -120,6 +120,15 @@ fn main() {
 
 }
 
+
+fn main() {
+
+    let mut password = "pokimon,".to_string();
+     password.push_str(" random string sire");
+    println!("changeing password is {}", password)
+}
+
+
 // string litreals are statics  By defults . this ensure that string is valid
 //for entaire duration  of the program  . you can explicitly declare the string  as stastic
 
