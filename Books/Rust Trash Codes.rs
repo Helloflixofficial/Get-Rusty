@@ -129,6 +129,52 @@ fn main() {
 }
 
 
+
+////////////////////////////////////////
+Relational Operators
+
+Relational Operators check or define the relationship equavalency 
+between two elements. Relational operators are used to compare two or more values. 
+Relational operators return a Boolean value − true or false.
+
+x = 5
+y = 2
+
+Show Examples
+
+      	Operator	Description	Example
+1	>	Greater than	(x > y) is true
+2	<	Lesser than	(x < y) is false
+3	>=	Greater than or equal to	(x >= y) is true
+4	<=	Lesser than or equal to	(x <= y) is false
+5	==	Equality	(x == y) is false
+6	!=	Not equal	(x != y) is true
+////////////////////////////////////
+
+Logical Operators
+
+Logical Operators are used to combine and check two or more conditions. 
+
+Logical operators return a Boolean value. 
+
+Show Examples
+
+x = 1
+y = 2
+
+Sr.No	Operator	Description	Example
+
+1)	&& (And)	The operator returns true as long as 
+all the expressions specified return true	
+(x > 0 && y > 3) false
+
+2)	||(OR)	The operator returns true if at least one of the expressions specified 
+return true	(x > 0 || y > 3) true
+
+3)	! (NOT)	The operator returns the inverse of the expression’s result. For E.g.: !(>5) 
+returns false	!(x < 4 ) false
+
+
 // string litreals are statics  By defults . this ensure that string is valid
 //for entaire duration  of the program  . you can explicitly declare the string  as stastic
 
