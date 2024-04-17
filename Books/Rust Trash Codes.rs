@@ -174,6 +174,14 @@ return true	(x > 0 || y > 3) true
 3)	! (NOT)	The operator returns the inverse of the expression’s result. For E.g.: !(>5) 
 returns false	!(x < 4 ) false
 
+fn main() {
+    let user = "todd";
+    if user.len() == 4 {
+        println!("pass");
+    } else {
+        println!("faild")
+    }
+}
 
 // string litreals are statics  By defults . this ensure that string is valid
 //for entaire duration  of the program  . you can explicitly declare the string  as stastic
