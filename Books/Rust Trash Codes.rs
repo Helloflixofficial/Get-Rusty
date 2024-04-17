@@ -183,6 +183,20 @@ fn main() {
     }
 }
 
+fn main() {
+    let user = "todd";
+    if user.len() == 4 {
+        println!("pass");
+    } else {
+        println!("faild")
+    }
+    if user.len() == 3 {
+        println!("pass");
+    } else {
+        println!("faild")
+    }
+}
+
 // string litreals are statics  By defults . this ensure that string is valid
 //for entaire duration  of the program  . you can explicitly declare the string  as stastic
 
