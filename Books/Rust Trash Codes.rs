@@ -197,6 +197,18 @@ fn main() {
     }
 }
 
+fn main() {
+    let password = "sharnaji";
+    if password.len() > 4 {
+        println!("Thanks For Your Support & fo password");
+    } else if password.len() > 2 {
+        println!("Atleast have more then 3 words");
+    } else {
+        println!("password is to short")
+    }
+}
+
+
 // string litreals are statics  By defults . this ensure that string is valid
 //for entaire duration  of the program  . you can explicitly declare the string  as stastic
 
