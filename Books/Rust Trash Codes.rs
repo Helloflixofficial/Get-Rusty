@@ -209,6 +209,23 @@ fn main() {
 }
 
 
+fn main() {
+    let micro = "xyz";
+    let body = match micro {
+        "xyz" => {
+            println!("Found match for microbine");
+            "Tummy bio"
+        },
+        "html" => "hiper language",
+        "Time" => "temporary",
+        "robot" => "unknown data",
+        _ => "No match found"
+    };
+    println!("The bio match {}", body);
+}
+
+
+
 // string litreals are statics  By defults . this ensure that string is valid
 //for entaire duration  of the program  . you can explicitly declare the string  as stastic
 
