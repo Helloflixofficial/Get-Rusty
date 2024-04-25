@@ -225,6 +225,16 @@ fn main() {
 }
 
 
+fn main(){
+    data = "kktk";
+    meta = match data {
+     "a" =>  "b"
+     "c" =>  "d"
+     "p" => "l"
+     "kktk" => "party"
+    }
+}
+
 
 // string litreals are statics  By defults . this ensure that string is valid
 //for entaire duration  of the program  . you can explicitly declare the string  as stastic
