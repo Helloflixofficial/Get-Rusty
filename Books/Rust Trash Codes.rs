@@ -236,6 +236,76 @@ fn main(){
 }
 
 
+fn main(){
+
+    // for loop example  - we call this a definite loop because we run it until
+    
+   for a in 1..20{ // 20 is not inclusive
+      if a==2 {
+      
+      // The continue statement skips the subsequent statements 
+      // in the current iteration and takes the control back to the beginning of the loop
+         continue;
+      }
+      println!("a is {}",a);
+   }
+   
+   // an indefinite loop is used when the number of iterations in a loop is indeterminate or unknown
+   
+   let mut b = 0;
+   while b < 5{
+      b = b + 1;
+      println!("loop b value is {}",b);
+   }
+   
+   //  also indefinite example
+   
+     //while true
+
+   let mut c = 0;
+   loop {
+      c-=1;
+      println!("c={}",c);
+
+      if c==-10 {
+      // breaks ends the loop and moves control to the next command outside the loop.
+         break;
+      }
+   }
+   
+   
+   // Exercise Solution
+   
+    let mut count: u32 = 0;
+
+    println!("Let's count until infinity!");
+
+    // Infinite loop
+    loop {
+        count += 1;
+
+        if count == 3 {
+            println!("Welcome to miami!");
+
+            // Skip the rest of this iteration
+            continue;
+        }
+
+        println!("{}", count);
+
+        if count == 5 {
+            println!("Time to call it a dat!");
+
+            // Exit this loop
+            break;   
+        }
+    }
+   
+}
+
+
+
+
 // string litreals are statics  By defults . this ensure that string is valid
 //for entaire duration  of the program  . you can explicitly declare the string  as stastic
 
