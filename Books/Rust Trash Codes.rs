@@ -303,6 +303,17 @@ fn main(){
    
 }
 
+fn main() { 
+   let tuple:(i8,f32,i32) = (2, 2.333, 22);
+   println!("{:?}",tuple);
+   println!("first value is :{:?}",tuple.0);
+   
+   // exercise solution
+   let user2:(i32,bool,&str) = (30,true,"Jack");
+   user_data(user2);
+}
+
+
 
 
 
