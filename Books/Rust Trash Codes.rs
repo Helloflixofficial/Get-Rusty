@@ -313,12 +313,36 @@ fn main() {
    user_data(user2);
 }
 
-
-
-
-
 // string litreals are statics  By defults . this ensure that string is valid
 //for entaire duration  of the program  . you can explicitly declare the string  as stastic
+
+
+// syntexx for function  === synt code to remember
+
+// 1 returning Function
+// 2 parameterized Function 
+
+//some function can have return statements that returns value back to the caller
+fn main() {
+    fn_main1();
+    fn_main();
+    another_function(100*5-499);
+}
+
+fn fn_main1() -> bool {
+    return true;
+}
+
+fn fn_main() {
+    println!("hello im a fuction");
+}
+
+// another function
+
+fn another_function(x: i32) {
+    println!("the value of x : {}", x)
+}
+
 
 
 
