@@ -363,6 +363,19 @@ fn main(){
 }
 
 
+fn main(){
+  let user2:(i32,bool,&str) = (30,true,"sharmaji");  
+  user_data(user2); 
+}
+
+fn user_data(x:(i32,bool,&str)){
+   
+    let (age,active,name) = x;
+    println!("age : {} , active : {} , name: {}",age,active,name);
+}
+
+
+
 
 
 
