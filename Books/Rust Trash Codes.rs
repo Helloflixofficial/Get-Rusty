@@ -323,11 +323,17 @@ fn main() {
 // 2 parameterized Function 
 
 //some function can have return statements that returns value back to the caller
+//some function can have return statements that returns value back to the caller
 fn main() {
     fn_main1();
     fn_main();
     another_function(100*5-499);
+
+    let y = plus_one(5);
+    println!("the value of y : {}", y)
+     let H = data_base();
 }
+
 
 fn fn_main1() -> bool {
     return true;
@@ -341,6 +347,10 @@ fn fn_main() {
 
 fn another_function(x: i32) {
     println!("the value of x : {}", x)
+}
+
+fn plus_one(z:i32) -> i32{
+    return z + 1 ;
 }
 
 
