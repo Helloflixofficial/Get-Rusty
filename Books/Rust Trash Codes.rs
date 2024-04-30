@@ -354,5 +354,15 @@ fn plus_one(z:i32) -> i32{
 }
 
 
+fn main(){
+    let tuple:(i8,f32,i32) = (2,5.6,500);
+    println!("{:?}",tuple);
+    println!("the sec value is {:?}",tuple.1);
+    println!("the first value is {:?}",tuple.0);
+    println!("the third value is {:?}",tuple.2);
+}
+
+
+
 
 
