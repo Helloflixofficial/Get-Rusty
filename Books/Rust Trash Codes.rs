@@ -386,7 +386,18 @@ fn userdata(x:(i32,&str,bool)){
   println!("date:{}, name : {}, active: {}",date,name,active);
 }
 
+fn main(){
+ let data:(i32,&str,bool) = (500,"sharmaji",false);
+ userdata(data);
+ let data:(i32,&str,bool) = (1000,"boby",true);
+ userdata(data);
+}
 
+
+fn userdata(x:(i32,&str,bool)){
+  let (date,name,active) = x;
+  println!("date:{}, name : {}, active: {}",date,name,active);
+}
 
 
 
