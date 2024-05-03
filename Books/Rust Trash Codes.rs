@@ -412,6 +412,17 @@ for value in arrs.iter(){
 }
 
 
+fn main(){
+  let mut array:[i32;6] = [12,2,3,2,4,5];
+  for i in 0..6 {
+    if array[i] == 2 {
+      array[i]  = 0; 
+    }
+    println!("THE INDEX VALUE :{}, & the actuall value : {}",i,array[i]);
+  }
+}
+
+
 
 
 
