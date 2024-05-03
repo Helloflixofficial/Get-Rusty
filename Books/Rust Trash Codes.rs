@@ -400,6 +400,19 @@ fn userdata(x:(i32,&str,bool)){
 }
 
 
+fn main() {
+    let arr: [&str; 4] = ["herry", "boby", "cartoon", "mac"];
+    let mut arrs = ["tommy", "thakur", "dev", "cartoonm"];
+    arrs[2] = "raja";
+    println!("there are the name's of heros:{:?} , {:?} ", arrs, arr);
+    println!("this are the names : {:?}", arrs.len());
+for value in arrs.iter(){
+    println!("the value of string is : {:?}",value);
+};
+}
+
+
+
 
 
 
