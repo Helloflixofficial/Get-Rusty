@@ -423,6 +423,17 @@ fn main(){
 }
 
 
+fn main(){
+   let vector1 = vec![1,2,3]; 
+   // vector v owns the object in heap
+
+   //only a single variable owns the heap memory at any given time
+   let vector2 = vector1; 
+   //two pointers to the same content is not allowed in rust
+
+   //Rust will check for memory access which is a key selling point for using the language
+
+
 
 
 
