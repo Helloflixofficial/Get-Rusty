@@ -434,6 +434,36 @@ fn main(){
    //Rust will check for memory access which is a key selling point for using the language
 
 
+fn main(){
+   let vector = vec![1,2,3];
+   //display(vector);
+   display(&vector);
+   println!("{}",vector[1]); // this will not work
+   
+   
+   // Exercise Solution 
+   
+    let mut car:String = String::from("Ferrari");
+   display2(&mut car); 
+   //pass a mutable reference of name
+   println!("The car has been updated to: {}",car);
+   
+}
+
+
+//fn display(x:Vec<i32>){
+fn display(x:&Vec<i32>){
+   println!("{:?}",x);
+   
+   
+}
+
+fn display2(_car:&mut String){
+   println!("_car value is :{}",_car);
+   _car.push_str(" F8 Tributo"); 
+   //Modify the actual string,name
+}    
+
 
 
 
