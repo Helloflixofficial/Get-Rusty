@@ -465,6 +465,24 @@ fn display2(_car:&mut String){
 }    
 
 
+    fn main(){
+   let vector = vec![1,2,3];
+   //display(vector);
+   display(&vector);
+   println!("{}",vector[1]); // this will not work
+   
+   
+   // Exercise Solution 
+   
+    let mut car:String = String::from("Ferrari");
+   display2(&mut car); 
+   //pass a mutable reference of name
+   println!("The car has been updated to: {}",car);
+   
+}
+
+
+
 
 
 
