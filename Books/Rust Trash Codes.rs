@@ -482,6 +482,21 @@ fn display2(_car:&mut String){
 }
 
 
+
+//fn display(x:Vec<i32>){
+fn display(x:&Vec<i32>){
+   println!("{:?}",x);
+   
+   
+}
+
+fn display2(_car:&mut String){
+   println!("_car value is :{}",_car);
+   _car.push_str(" F8 Tributo"); 
+   //Modify the actual string,name
+}    
+
+
     fn main(){
    let vector = vec![1,2,3];
    //display(vector);
@@ -498,19 +513,6 @@ fn display2(_car:&mut String){
    
 }
 
-
-//fn display(x:Vec<i32>){
-fn display(x:&Vec<i32>){
-   println!("{:?}",x);
-   
-   
-}
-
-fn display2(_car:&mut String){
-   println!("_car value is :{}",_car);
-   _car.push_str(" F8 Tributo"); 
-   //Modify the actual string,name
-}    
 
 
 
