@@ -529,6 +529,26 @@ fn main() {
 }
 
 
+    fn main() {
+   let game = "Mario Brothers".to_string();
+   println!("length of the game is {}",game.len());
+   let slice = &game[0..5]; 
+   println!("{}",slice);
+   
+   // Exercise Solutio n
+    let mut nums = [1,2,3,4,5];
+   slice_and_dice(&mut nums[1..3]);
+   // passes references 
+   println!("{:?}",nums);
+}
+
+fn slice_and_dice(slice:&mut [i32]) {
+   println!("length of slice is {:?}",slice.len());
+   println!("{:?}",slice);
+   slice[0] = 200; 
+}
+
+
 
 
 
