@@ -1,8 +1,4 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2636
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}{
-\
-Slices in Rust\
-\
+
 Slices let you reference a contiguous sequence of elements in a collection rather than the whole collection. \
 A slice is a kind of reference, so it does not have ownership.\
 \
