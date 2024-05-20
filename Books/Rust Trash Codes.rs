@@ -562,7 +562,31 @@ fn slice_and_dice(slice:&mut [i32]) {
     let new_triangle = Triangle \{\
         base:10,\
         height:30 \
-    \};\
+    };
+
+        
+fn main() {
+    
+    let home1 = House {
+        door:String::from("Blue"),
+        garden:String::from("Beautiful"), 
+        property_value:1000000
+    }; 
+    
+    println!("door is: {}, garden is: {}, property value is: {}",
+    home1.door, home1.garden, home1.property_value);
+    
+    let new_triangle = Triangle {
+        base:10,
+        height:30 
+    };
+    
+    println!("the area of the triangle is: {}", new_triangle.find_area());
+    
+}
+
+
+        
 
 
 
