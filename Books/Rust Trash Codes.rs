@@ -582,7 +582,22 @@ fn main() {
     };
     
     println!("the area of the triangle is: {}", new_triangle.find_area());
-    
+}
+
+
+        struct House {
+    door: String,
+    garden: String,
+    property: u32,
+}
+
+fn main() {
+    let home = House {
+        door: String::from("Blue"),
+        garden: String::from("beautiful"),
+        property: 500_000_000,
+    };
+    println!("Door: {}, Garden: {}, Property: {}", home.door, home.garden, home.property);
 }
 
 
