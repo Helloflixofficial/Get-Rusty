@@ -600,6 +600,29 @@ fn main() {
     println!("Door: {}, Garden: {}, Property: {}", home.door, home.garden, home.property);
 }
 
+        fn main() {
+    
+    let c1 = City {
+        name:String::from("Alaska"),
+        temperature:TemperatureGrade::Cold
+    };
+    
+    let c2 = City {
+        name:String::from("Miami"),
+        temperature:TemperatureGrade::Hot
+    };
+    
+    println!("{:?}",c1);
+    println!("{:?}",c2);
+    
+    // Exercise Solution
+    print_shoes(Shoes::Nike);
+    print_shoes(Shoes::Loafer);
+    print_shoes(Shoes::Vans);
+    
+}
+
+
 
         
 
