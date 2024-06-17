@@ -679,6 +679,26 @@ select("Pineapple Blues".to_string());
 }
 
 
+    pub mod tracks {
+    pub mod rock {
+        pub mod inde {
+            pub fn select(name : String){
+                println!("Tracks selection is {}",name);
+            }
+        }
+    }
+}
+
+use tracks::rock::inde::select;
+
+fn main(){
+select("Arjit Singh".to_string());
+select("Ankit Tiwari".to_string());
+select("Sonu Nigam".to_string());
+}
+
+
+
         
 
 
