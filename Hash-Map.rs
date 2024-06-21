@@ -1,4 +1,4 @@
-// Proper 
+// I'm trying to recall where I left learning this HashMap.
 use std::collections::HashMap;
 fn main(){
      let mut accountinfo = HashMap::new();
