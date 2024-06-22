@@ -17,3 +17,33 @@ fn main(){
 }
 
 
+// fn two
+use std::collections::HashMap;
+fn main() {
+    let mut scores = HashMap::new();
+    // Inserting values
+    scores.insert("Blue", 10);
+    scores.insert("Yellow", 50);
+    // Accessing values
+    if let Some(score) = scores.get("Blue") {
+        println!("Blue team score: {}", score);
+    }
+    // Updating a value
+    if let Some(score) = scores.get_mut("Blue") {
+        *score += 10;
+    }
+    // Checking for existence
+    if scores.contains_key("Yellow") {
+        println!("Yellow team is present");
+    }
+    // Removing a value
+    scores.remove("Yellow");
+    // Iterating over entries
+    for (team, score) in &scores {
+        println!("{}: {}", team, score);
+    }
+    // Getting the length
+    println!("Number of teams: {}", scores.len());
+    // Clearing the HashMap
+    scores.clear();
+}
