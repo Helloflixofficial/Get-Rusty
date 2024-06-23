@@ -16,17 +16,21 @@ fn main(){
   println!("THE size of thebardrinks is {}",bardrinks.len());//after
 }
 
-
-// fn two
+//fn three
 use std::collections::HashMap;
 fn main() {
     let mut scores = HashMap::new();
     // Inserting values
     scores.insert("Blue", 10);
     scores.insert("Yellow", 50);
+    scores.insert("red", 30);
     // Accessing values
     if let Some(score) = scores.get("Blue") {
         println!("Blue team score: {}", score);
+    }
+    // Accessing values
+    if let Some(score) = scores.get("red") {
+        println!("red team score: {}", score);
     }
     // Updating a value
     if let Some(score) = scores.get_mut("Blue") {
@@ -47,3 +51,4 @@ fn main() {
     // Clearing the HashMap
     scores.clear();
 }
+
