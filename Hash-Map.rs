@@ -52,3 +52,22 @@ fn main() {
     scores.clear();
 }
 
+
+
+
+
+
+use std::collections::HashMap;
+pub fn main() {
+    let mut list: HashMap<String, f32> = HashMap::new();
+    list.insert("data");
+
+
+
+//any
+
+
+
+    println!("ther size of the hashmap s {}", list.len());
+}
+
