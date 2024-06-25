@@ -58,16 +58,31 @@ fn main() {
 
 
 use std::collections::HashMap;
-pub fn main() {
-    let mut list: HashMap<String, f32> = HashMap::new();
-    list.insert("data");
+use std::error::Error;
+use serde_json::Value;
+use reqwest;
 
-
-
-//any
-
-
-
-    println!("ther size of the hashmap s {}", list.len());
+async fn fetch_json(url: &str) -> Result<Value, Box<dyn Error>> {
+    let response = reqwest::get(url).await?.text().await?;
+    let json: Value = serde_json::from_str(&response)?;
+    Ok(json)
 }
+
+#[tokio::main]
+async fn main() -> Result<(), Box<dyn Error>> {
+    let mut list: HashMap<String, f32> = HashMap::new();
+    list.insert("NVA".to_string(), 200.50);
+    list.insert("APP".to_string(), 225.25);
+    list.insert("remove".to_string(), 111.25);
+    println!("The contents of the hashmap are: {:#?}", list);
+    list.remove(&"remove".to_string());
+    list.insert("remove".to_string(), 222.25);
+    println!("The size of the hashmap is: {}", list.len());
+    println!("The contents of the hashmap are: {:#?}", list); 
+    let url = "https://webdis-7ies.onrender.com/recent-release";
+    let data = fetch_json(url).await?;
+    println!("{:#?}", data);
+    Ok(())
+}
+
 
