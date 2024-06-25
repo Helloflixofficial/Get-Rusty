@@ -56,7 +56,19 @@ fn main() {
 
 
 
-
+//////////
+//Cargo.toml
+[package]
+name = "rustdata"
+version = "0.1.0"
+edition = "2021"
+[dependencies]
+reqwest = { version = "0.11", features = ["json"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tokio = { version = "1", features = ["full"] }
+//
+//main.rs
 use std::collections::HashMap;
 use std::error::Error;
 use serde_json::Value;
