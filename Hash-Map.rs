@@ -98,3 +98,10 @@ async fn main() -> Result<(), Box<dyn Error>> {
 }
 
 
+pub fn main(){
+    let mut data: HashMap<String,f32> = HashMap::new();
+    data.insert("Sharmaji".to_string(), 007.3);
+    data.insert("Sharmaji".to_string(), 003.3);
+    data.entry("Kumar".to_string()).or_insert(55.2);
+    println!("{:#?}", data);
+}
