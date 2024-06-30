@@ -53,3 +53,17 @@ heapq.heapify(nums) # build heap
 # sometimes even nested loops can be O(n)
 # (e.g. monotonic stack or sliding window)
 
+
+
+
+fn main() {
+    let nums1 = vec![1, 2, 3];
+    let nums2 = vec![4, 5];
+    for &num1 in &nums1 {
+        for &num2 in &nums2 {
+            println!("{} {}", num1, num2);
+        }
+    }
+}
+
+
