@@ -66,4 +66,14 @@ fn main() {
     }
 }
 
+fn main(){
+    let num1 = vec![1,2,3];
+    let num2 = vec![4,5,6];
+    for  &nums1 in &num1{
+        for &nums2 in &num2{
+            println!("{} {}",nums1,nums2);
+        }
+    } 
+}
+
 
