@@ -76,4 +76,19 @@ fn main(){
     } 
 }
 
+fn main() {
+    let nums = vec![
+        vec![1, 2, 3],
+        vec![4, 5, 6],
+    ];
+
+
+
+    for i in 0..nums.len() {
+        for j in 0..nums[i].len() {
+            println!("{}", nums[i][j]);
+        }
+    }
+}
+
 
