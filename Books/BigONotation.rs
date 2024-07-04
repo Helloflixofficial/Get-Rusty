@@ -92,3 +92,23 @@ fn main() {
 }
 
 
+fn main() {
+    let nums = vec![1, 2, 3, 4, 5];
+    let target = 6;
+    let mut l = 0;
+    let mut r = nums.len() - 1;
+
+    while l <= r {
+        let m = (l + r) / 2;
+        if target < nums[m] {
+            r = m - 1;
+        } else if target > nums[m] {
+            l = m + 1;
+        } else {
+            println!("{}", m);
+            break;
+        }
+    }
+}
+
+
