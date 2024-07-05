@@ -111,4 +111,20 @@ fn main() {
     }
 }
 
+use std::collections::BinaryHeap;
+
+fn heap_sort(nums: &mut [i32]) {
+    let mut heap = BinaryHeap::from(nums.to_vec());
+    for i in (0..nums.len()).rev() {
+        nums[i] = heap.pop().unwrap();
+    }
+}
+
+fn main() {
+    let mut nums = [1, 2, 3, 4, 5];
+    heap_sort(&mut nums);
+    println!("{:?}", nums);
+}
+
+
 
