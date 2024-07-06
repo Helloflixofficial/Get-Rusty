@@ -127,4 +127,26 @@ fn main() {
 }
 
 
+use std::collections::BinaryHeap;
+use std::cmp::Reverse;
+
+fn main() {
+    let mut min_heap = BinaryHeap::new();
+
+    // Push elements as Reverse to simulate a min-heap
+    min_heap.push(Reverse(4));
+    min_heap.push(Reverse(1));
+    min_heap.push(Reverse(7));
+    min_heap.push(Reverse(3));
+
+    // Pop elements off the heap
+    while let Some(Reverse(element)) = min_heap.pop() {
+        println!("Popped element: {}", element);
+    }
+}
+
+
+
+
+
 
