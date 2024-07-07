@@ -146,7 +146,25 @@ fn main() {
 }
 
 
+//  c branches, where c is sometimes n.
+fn rec(i: usize, nums: &[i32], c: usize) -> i32 {
+    if i == nums.len() {
+        return 0;
+    }
 
+    let mut result = 0;
+    for j in i..std::cmp::min(i + c, nums.len()) {
+        result += rec(j + 1, nums, c);
+    }
+    result
+}
+
+fn main(){
+    let nums = vec![1,2,3,4,5];
+    let c = 3;
+    let result = rec(0, &nums,c);
+    println!("Result : {}", result);
+}
 
 
 
