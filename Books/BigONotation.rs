@@ -167,4 +167,31 @@ fn main(){
 }
 
 
+use std::collections::HashSet;
+
+fn get_all_factors(n: u64) -> HashSet<u64> {
+    let mut factors = HashSet::new();
+    let sqrt_n = (n as f64).sqrt() as u64;
+    for i in 1..=sqrt_n {
+        if n % i == 0 {
+            factors.insert(i);
+            factors.insert(n / i);
+        }
+    }
+    factors
+}
+
+fn main_logic() -> i32 {
+    let n = 12;
+    let factors = get_all_factors(n);
+    println!("Factors of {}: {:?}", n, factors);
+    0
+}
+
+fn main() {
+    std::process::exit(main_logic());
+}
+
+
+
 
