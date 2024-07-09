@@ -105,3 +105,29 @@ pub fn main(){
     data.entry("Kumar".to_string()).or_insert(55.2);
     println!("{:#?}", data);
 }
+
+
+
+fn main() {
+    let mut nums = vec![1, 2, 3];
+    let sum: i32 = nums.iter().sum();
+    println!("Sum: {}", sum);
+    for n in &nums {
+        println!("{}", n);
+    }
+    
+    nums.insert(1, 100);
+    if let Some(pos) = nums.iter().position(|&x| x == 100) {
+        nums.remove(pos);
+    }
+    
+    let contains = nums.contains(&100);
+    println!("Contains 100: {}", contains);
+    
+ 
+    use std::collections::BinaryHeap;
+    let mut heap = BinaryHeap::from(nums.clone());
+    let mut min_heap: Vec<_> = heap.into_sorted_vec();
+    min_heap.reverse();
+    println!("Heap: {:?}", min_heap);
+}
