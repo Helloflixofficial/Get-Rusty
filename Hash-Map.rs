@@ -131,3 +131,27 @@ fn main() {
     min_heap.reverse();
     println!("Heap: {:?}", min_heap);
 }
+
+use std::collections::HashMap;
+
+fn main() {
+    let mut scores = HashMap::new();
+    scores.insert(String::from("Alice"), 50);
+    scores.insert(String::from("Boby"), 30);
+    scores.insert(String::from("Carol"), 100);
+
+    let alice_score = scores.get("Alice");
+
+    match alice_score {
+        Some(score) => println!("Alice's score is: {}", score),
+        None => println!("Alice's score is not found"),
+    }
+
+    for (key, value) in &scores {
+        println!("{}: {}", key, value);
+    }
+
+    scores.insert(String::from("Bob"), 40);
+    scores.remove("Carol");
+    println!("Final scores: {:?}", scores);
+}
