@@ -72,3 +72,55 @@ fn main() {
         println!();
     }
 }
+
+fn main() {
+    let size = 5; // Size of the diamond (number of layers)
+
+    // Top half of the diamond
+    for i in 0..size {
+        for _ in 0..(size - i - 1) {
+            print!(" ");
+        }
+        for _ in 0..(2 * i + 1) {
+            print!("*");
+        }
+        println!();
+    }
+
+    // Bottom half of the diamond
+    for i in (0..size - 1).rev() {
+        for _ in 0..(size - i - 1) {
+            print!(" ");
+        }
+        for _ in 0..(2 * i + 1) {
+            print!("*");
+        }
+        println!();
+    }
+}
+
+fn main() {
+    let size = 50; // Size of the diamond (number of layers)
+
+    // Top half of the diamond
+    for i in 0..size {
+        for _ in 0..(size - i - 1) {
+            print!(" ");
+        }
+        for _ in 0..(2 * i + 1) {
+            print!("*");
+        }
+        println!();
+    }
+
+    // Bottom half of the diamond
+    for i in (0..size - 1).rev() {
+        for _ in 0..(size - i - 1) {
+            print!(" ");
+        }
+        for _ in 0..(2 * i + 1) {
+            print!("*");
+        }
+        println!();
+    }
+}
