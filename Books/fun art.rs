@@ -52,3 +52,29 @@ fn main() {
 }
 
 
+fn main() {
+    let size = 10; // Size of the star
+    
+    // Top half
+    for i in 0..size {
+        for _j in 0..(size - i - 1) {
+            print!(" ");
+        }
+        for _k in 0..(2 * i + 1) {
+            print!("*");
+        }
+        println!();
+    }
+
+    // Bottom half 
+    for i in (0..size-1).rev() {
+        for _j in 0..(size - i - 1) {
+            print!(" ");
+        }
+        for _k in 0..(2 * i + 1) {
+            print!("*");
+        }
+        println!();
+    }
+}
+
