@@ -1,6 +1,6 @@
 fn main() {
     let n = 10; // Height  for the bow
-    // Top half 
+                // Top half
     for i in 0..n {
         for _ in 0..i {
             print!(" ");
@@ -11,7 +11,7 @@ fn main() {
         println!();
     }
 
-    // Bottom half 
+    // Bottom half
     for i in (0..n).rev() {
         for _ in 0..i {
             print!(" ");
@@ -23,11 +23,9 @@ fn main() {
     }
 }
 
-
-
 fn main() {
     let size = 10; // Size of the star
-    
+
     // Top half
     for i in 0..size {
         for _j in 0..(size - i - 1) {
@@ -39,8 +37,8 @@ fn main() {
         println!();
     }
 
-    // Bottom half 
-    for i in (0..size-1).rev() {
+    // Bottom half
+    for i in (0..size - 1).rev() {
         for _j in 0..(size - i - 1) {
             print!(" ");
         }
@@ -51,11 +49,9 @@ fn main() {
     }
 }
 
-
 fn main() {
-    let size = 10; // Size of the star
-    
-    // Top half
+    let size = 10;
+
     for i in 0..size {
         for _j in 0..(size - i - 1) {
             print!(" ");
@@ -66,8 +62,7 @@ fn main() {
         println!();
     }
 
-    // Bottom half 
-    for i in (0..size-1).rev() {
+    for i in (0..size - 1).rev() {
         for _j in 0..(size - i - 1) {
             print!(" ");
         }
@@ -77,4 +72,3 @@ fn main() {
         println!();
     }
 }
-
