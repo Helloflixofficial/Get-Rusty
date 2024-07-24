@@ -124,3 +124,29 @@ fn main() {
         println!();
     }
 }
+
+
+//ice Cream
+fn main() {
+    let size = 10;
+    
+    for i in 0..size {
+        for _ in 0..(size - i - 1) {
+            print!(" ");
+        }
+        for _ in 0..(2 * i + 1) {
+            print!("0");
+        }
+        println!();
+    }
+
+    for i in (0..size - 1).rev() {
+        for _ in 0..(size - i - 1) {
+            print!(" ");
+        }
+        for _ in 0..(2 * i + 1) {
+            print!("1");
+        }
+        println!();
+    }
+}
