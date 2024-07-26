@@ -41,3 +41,23 @@ fn main(){
         println!("{:?}",i)
     }
 }
+
+
+fn main(){
+    let v = vec![1,2,3,4,5];
+    println!("{:?}",v);
+}
+
+fn main() {
+    let v = vec![1,2,3,4,5];
+    match v.get(3){
+        Some(third) => println!("the third elements is {}", third),
+        None => println!("there is no third elemet"),
+    }
+}
+
+fn main(){
+    let v = vec![1,2,3,4,5];
+    let slice = &v[1..3];
+    println!("{:?}",slice)
+}
