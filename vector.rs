@@ -61,3 +61,33 @@ fn main(){
     let slice = &v[1..3];
     println!("{:?}",slice)
 }
+
+//daily cota
+fn main(){
+    let mut num = Vec::new();
+   num.push(10);
+   num.push(30);
+   num.push(60);
+   println!("initial data {:?}",num);
+
+   if let Some(first) = num.get(0){
+    println!("First element : {}", first);
+   }
+
+   for numb in &num{
+    println!("Number : {}",numb);
+   }
+
+   for numb in &mut num {
+    *numb += 5;
+   }
+
+   println!("Modify vector :  {:?}",num);
+
+   if num.len()> 1 {
+    num.remove(1);
+   }
+   println!("After  removing second element : {:?}",num);
+   let slice =&num[..];
+   println!("slice vector : {:? }", slice)
+}
