@@ -26,3 +26,11 @@ fn main() {
     v.remove(1); // removes the element at index 1
     println!("{:?}", v);
 }
+
+fn main(){
+    let mut v = vec![1,2,3,4,5];
+    for i in &mut v {
+        *i += 10;
+    }
+    println!("{:?}",v);
+}
