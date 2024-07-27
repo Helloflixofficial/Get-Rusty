@@ -91,3 +91,28 @@ fn main(){
    let slice =&num[..];
    println!("slice vector : {:? }", slice)
 }
+
+
+
+fn main() {
+    let mut numbers: Vec<i32> = Vec::new();
+    numbers.push(1);
+    numbers.push(2);
+    numbers.push(3);
+    numbers.push(4);
+    numbers.push(5);
+    if let Some(first) = numbers.get_mut(0) {
+        *first = 10;
+    }
+
+    println!("Elements in the vector:");
+    for number in &numbers {
+        println!("{}", number);
+    }
+
+    println!("Elements in the vector using indices:");
+    for i in 0..numbers.len() {
+        println!("{}", numbers[i]);
+    }
+}
+
