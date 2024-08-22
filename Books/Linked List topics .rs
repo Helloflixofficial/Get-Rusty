@@ -166,6 +166,37 @@ fn main() {
     };
 }
 
+fn main() {
+    let mut flights: Vec<&str> = Vec::new();
+    flights.push("DA113\t to Boston department at 06:20");
+    flights.push("DA98\t to Boston department at 09:43");
+    flights.push("DA428\t to Boston department at 12:05");
+    flights.push("DA41\t to Boston department at 15:30");
+    flights.push("DA2815\t to Boston department at 17:11");
+
+    let third = flights[2];
+    println!("\n {}", third);
+
+    flights.remove(0);
+    flights.remove(1);
+    flights.remove(2);
+
+    let fourth = flights.get(3);
+    match fourth {
+        Some(flight) => {
+            println!("with actuall data{}", flight)
+        }
+        _ => {}
+    }
+
+    if let Some(flight_value) = flights.get(3) {
+        println!("{}", flight_value);
+    }
+
+    for flights in flights.iter() {
+        println!("{}", flights);
+    }
+}
 
 
 
