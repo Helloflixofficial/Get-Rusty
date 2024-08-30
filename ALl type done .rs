@@ -77,3 +77,27 @@ fn main() {
     let slice: &str = &s[0..5];
     println!("String slice: {}", slice);
 }
+
+
+struct LinkedList {
+    head: Option<Box<ListNode>>,
+}
+
+impl LinkedList {
+    fn new() -> Self {
+        LinkedList { head: None }
+    }
+
+    fn push(&mut self, val: i32) {
+        let new_node = Box::new(ListNode { val, next: self.head.take() });
+        self.head = Some(new_node);
+    }
+
+    fn pop(&mut self) -> Option<i32> {
+        self.head.take().map(|node| {
+            self.head = node.next;
+            node.val
+        })
+    }
+
+}
