@@ -101,3 +101,49 @@ impl LinkedList {
     }
 
 }
+
+
+// Linked List Types done
+
+use std::collections::LinkedList;
+
+fn main() {
+    // Create a new empty linked list
+    let mut list: LinkedList<i32> = LinkedList::new();
+
+    // Push elements to the front and back of the list
+    list.push_back(10);
+    list.push_back(20);
+    list.push_front(5);
+
+    // Print the linked list
+    println!("List after pushing elements: {:?}", list);
+
+    // Pop elements from the front and back
+    let front = list.pop_front();
+    let back = list.pop_back();
+
+    println!("Popped front: {:?}", front);
+    println!("Popped back: {:?}", back);
+    println!("List after popping: {:?}", list);
+
+    // Access the front and back elements without removing them
+    if let Some(first) = list.front() {
+        println!("Front element: {}", first);
+    }
+
+    if let Some(last) = list.back() {
+        println!("Back element: {}", last);
+    }
+
+    // Iterate over the list
+    println!("Iterating over the list:");
+    for elem in list.iter() {
+        println!("{}", elem);
+    }
+
+    // Clear the list
+    list.clear();
+    println!("List after clearing: {:?}", list);
+}
+
