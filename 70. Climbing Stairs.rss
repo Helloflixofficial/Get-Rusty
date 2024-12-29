@@ -1,0 +1,26 @@
+struct Solution;
+
+impl Solution {
+     pub fn climb_stairs(n: i32) -> i32 {
+        if n <= 2 {
+         return n;
+        }
+
+        let mut one = 1; 
+        let mut two = 2;
+        for _ in 3..=n {
+            let current = one + two;
+ // println!("{}",current); // 3,5,8,13,21,34,55,89
+            one = two;
+            // println!("{}",one);  
+            two = current; 
+        }
+        two
+    }
+}
+
+fn main() {
+    let n = 10;
+    let result = Solution::climb_stairs(n);
+    println!("The number of distinct ways to climb {} steps is: {}", n, result);
+}
