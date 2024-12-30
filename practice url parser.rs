@@ -1,8 +1,9 @@
+//https://medium.com/@mikecode/rust-url-parse-712994cd1263
 use url::Url;
 
 
 fn main() {
-  let url = "http://jim:123456@localhost:8080?page=1";
+  let url = "http://root:root@localhost:8080?page=1";
   let parsed_url = Url::parse(&url).unwrap();
   println!("{:?}", parsed_url.domain()); //Some("localhost") 
   println!("{:?}", parsed_url.host()); // Some(Domain("localhost"))
