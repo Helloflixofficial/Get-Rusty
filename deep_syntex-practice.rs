@@ -54,3 +54,19 @@ fn main(){
     println!("{}",data);
 }
 
+
+// arr & Slice 
+
+fn main() {
+    let arr = [0, 1, 2, 3, 4, 5]; // The full array
+    let slice = &arr[1..3]; // Slice containing elements [1, 2]
+    borrowing_slice(arr, slice);
+}
+
+fn borrowing_slice(arr: [u8; 6], slice: &[u8]) {
+    println!("{:?}", arr); // Print the full array
+    println!("{:?}", slice); // Print the slice
+    println!("length: {}", slice.len()); // Length of the slice
+    println!("{} {}", slice[0], slice[1]); // Access elements of the slice
+}
+
