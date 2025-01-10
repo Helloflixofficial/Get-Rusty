@@ -70,3 +70,37 @@ fn borrowing_slice(arr: [u8; 6], slice: &[u8]) {
     println!("{} {}", slice[0], slice[1]); // Access elements of the slice
 }
 
+
+//vector
+fn main(){
+   let mut data: Vec<i64> = vec![1,2,3,4,5];
+    data.len();
+    data[0];
+    data.push(6);
+    data.remove(2);
+    println!("{:?}",data);
+}
+
+// HashMap 
+use std::collections::HashMap;
+
+fn main(){
+let mut map = HashMap::new();
+map.insert(0, "Hii");
+map.insert(1,", Sire");
+println!("{:?}", map);
+
+match map.get(&0) {
+    Some(str) => println!("{:?}",str),
+    _ => println!("Doesn't exist in mao")
+}
+
+match map.get(&2) {
+    Some(str) => println!("{}",str),
+    _ => println!("doesn't exist in map")
+}
+
+map.remove(&0);
+println!("{:?}",map);
+}
+
