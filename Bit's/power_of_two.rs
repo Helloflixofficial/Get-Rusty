@@ -1,5 +1,5 @@
 fn is_power_of_two(n: u32) -> bool {
-    n != 0 && n & (n - 1) == 0
+    n != 0 && (n & (n - 1)) == 0
 }
 
 fn main() {
