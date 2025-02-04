@@ -51,3 +51,29 @@ fn main() {
     println!("Original: {}", input);
     println!("Compressed: {}", compressed);
 }
+
+
+
+
+///
+use std::collections::HashMap;
+
+fn count_char_frequency(s: &str) -> HashMap<char, usize> {
+    let mut frequency_map = HashMap::new();
+
+    for ch in s.chars() {
+        *frequency_map.entry(ch).or_insert(0) += 1;
+    }
+
+    frequency_map
+}
+
+fn main() {
+    let input = "hello world";
+    let frequency = count_char_frequency(input);
+
+    println!("Character Frequency:");
+    for (ch, count) in &frequency {
+        println!("'{}': {}", ch, count);
+    }
+}
