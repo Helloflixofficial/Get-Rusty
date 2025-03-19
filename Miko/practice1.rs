@@ -21,7 +21,7 @@ use user::{ActiveModel as UserModel , Entity as User};
 
 #[tokio::main]
 async fn main() {
-  let connection = Database::connect("postgres://mike:123456@localhost:5432/test").await.unwrap();
+  let connection = Database::connect("postgres://miku:123456@localhost:5432/test").await.unwrap();
 
   let user1 = UserModel {
     name: Set("Jim".to_string()),
