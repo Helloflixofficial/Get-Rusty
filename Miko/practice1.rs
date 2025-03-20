@@ -1,18 +1,3 @@
-use sea_orm::prelude::*;
-#[derive(Debug, Clone, PartialEq, Eq, DeriveEntityModel, Default)]
-#[sea_orm(table_name = "users")]
-pub struct Model {
-    #[sea_orm(primary_key)]
-    id: i32,
-    name: String,
-}
-
-#[derive(Debug, Clone, EnumIter, DeriveRelation)]
-pub enum Relation {}
-
-impl ActiveModelBehavior for ActiveModel {}
-
-
 use sea_orm::{ActiveModelTrait, ActiveValue::Set, Database, EntityTrait, ModelTrait};
 
 mod user;
@@ -21,7 +6,7 @@ use user::{ActiveModel as UserModel , Entity as User};
 
 #[tokio::main]
 async fn main() {
-  let connection = Database::connect("postgres://miku:123456@localhost:5432/test").await.unwrap();
+  let connection = Database::connect("postgres://mike:123456@localhost:5432/test").await.unwrap();
 
   let user1 = UserModel {
     name: Set("Jim".to_string()),
