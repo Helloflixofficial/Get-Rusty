@@ -12,6 +12,13 @@ impl Solution{
         }
    }
 
+ let mut left = i + 1;
+        let mut right = nums.len() - 1;
+        
+        while left < right {
+            let sum = nums[i] + nums[left] + nums[right];
+        
+//with Rust.. busy 
 //Incomplete Brain is Not braining right now
 
 
