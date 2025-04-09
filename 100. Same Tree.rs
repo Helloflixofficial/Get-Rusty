@@ -27,7 +27,25 @@ impl Solution {
     ) -> bool {
     }
 }
+
+
 fn main() {
-    let mut p = [1,2,3], 
-   let mut  q = [1,2,3]
+    let t1 = Some(TreeNode::rc(1));
+    t1.as_ref().unwrap().borrow_mut().left = Some(TreeNode::rc(2));
+    t1.as_ref().unwrap().borrow_mut().right = Some(TreeNode::rc(3));
+
+    let t2 = Some(TreeNode::rc(1));
+    t2.as_ref().unwrap().borrow_mut().left = Some(TreeNode::rc(2));
+    t2.as_ref().unwrap().borrow_mut().right = Some(TreeNode::rc(3));
+
+    println!(
+        "Are trees same? {}",
+        Solution::is_same_tree(t1.clone(), t2.clone())
+    );
+
+    let t3 = Some(TreeNode::rc(1));
+    t3.as_ref().unwrap().borrow_mut().left = Some(TreeNode::rc(2));
+    let t4 = Some(TreeNode::rc(1));
+    t4.as_ref().unwrap().borrow_mut().right = Some(TreeNode::rc(2));
+    println!("Are trees same? {}", Solution::is_same_tree(t3, t4));
 }
