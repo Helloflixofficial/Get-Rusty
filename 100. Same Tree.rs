@@ -1,6 +1,5 @@
 use std::cell::RefCell;
 use std::rc::Rc;
-struct Solution;
 
 #[derive(Debug, PartialEq, Eq)]
 pub struct TreeNode {
@@ -18,8 +17,13 @@ impl TreeNode {
             right: None,
         }
     }
+    #[inline]
+    pub fn rc(val: i32) -> Rc<RefCell<TreeNode>> {
+        Rc::new(RefCell::new(TreeNode::new(val)))
+    }
 }
 
+struct Solution;
 impl Solution {
     pub fn is_same_tree(
         p: Option<Rc<RefCell<TreeNode>>>,
