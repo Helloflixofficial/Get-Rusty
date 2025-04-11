@@ -1,3 +1,5 @@
+//Practice..
+
 use std::cell::RefCell;
 use std::rc::Rc;
 
@@ -24,14 +26,25 @@ impl TreeNode {
 }
 
 struct Solution;
+
 impl Solution {
     pub fn is_same_tree(
         p: Option<Rc<RefCell<TreeNode>>>,
         q: Option<Rc<RefCell<TreeNode>>>,
     ) -> bool {
+        match (p, q) {
+            (None, None) => true,
+            (Some(node1), Some(node2)) => {
+                let b1 = node1.borrow();
+                let b2 = node2.borrow();
+                b1.val == b2.val
+                    && Self::is_same_tree(b1.left.clone(), b2.left.clone())
+                    && Self::is_same_tree(b1.right.clone(), b2.right.clone())
+            }
+            _ => false,
+        }
     }
 }
-
 
 fn main() {
     let t1 = Some(TreeNode::rc(1));
