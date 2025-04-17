@@ -25,11 +25,12 @@ impl Solution{
             i -= 1;
         }
 
-
+  result.push(((sum % 2) + b'0') as char);
+            carry = (sum / 2) as u8;
 
        }
 
-
+  result.chars().rev().collect()
     }
 }
 
