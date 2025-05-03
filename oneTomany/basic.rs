@@ -24,3 +24,17 @@ impl Related<super::post::Entity> for Entity {
 impl ActiveModelBehavior for ActiveModel {
     
 }
+
+// Code needed
+fn main() {
+    let use_float = true;
+
+    let value = if use_float {
+        1.0
+    } else {
+        // 1     // ❌ Error: mismatched types
+        1.0     // ✅ Must match: both arms must be f64
+    };
+
+    println!("Value: {}", value);
+}
