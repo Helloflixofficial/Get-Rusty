@@ -99,6 +99,43 @@ async fn get_joke() -> Result<Joke, Box<dyn std::error::Error>> {
     Ok(joke)
 }
 
+/////////////////
+use reqwest;
+use serde::Deserialize;
+
+#[derive(Debug, Deserialize)]
+struct MemeResponse {
+    title: String,
+    url: String,
+    postLink: String,
+}
+
+#[tokio::main]
+async fn main() {
+    println!("🎯 Fetching a meme...");
+
+    match fetch_meme().await {
+        Ok(meme) => {
+            println!("\n🤣 Meme Title: {}", meme.title);
+            println!("🖼️ Image URL: {}", meme.url);
+            println!("🔗 Reddit Post: {}", meme.postLink);
+        }
+        Err(err) => {
+            println!("❌ Failed to fetch meme: {}", err);
+        }
+    }
+}
+
+async fn fetch_meme() -> Result<MemeResponse, Box<dyn std::error::Error>> {
+    let res = reqwest::get("https://meme-api.com/gimme")
+        .await?
+        .json::<MemeResponse>()
+        .await?;
+
+    Ok(res)
+}
+
+
 tokio = { version = "1", features = ["full"] }
 reqwest = { version = "0.11", features = ["json"] }
 serde = { version = "1.0", features = ["derive"] }
