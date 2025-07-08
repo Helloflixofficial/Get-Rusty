@@ -1,19 +1,26 @@
-struct Solution;
-
 impl Solution {
     pub fn longest_ones(nums: Vec<i32>, k: i32) -> i32 {
         let mut left = 0;
+        let mut right = 0;
+        let mut zero = 0;
         let mut max_len = 0;
-        let mut zeros = 0;
 
-}
-}
+        while right < nums.len(){
+            if nums[right] == 0 {
+                zero += 1;
+            }
 
-fn main() {
-    let nums = vec![1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0];
-    let k = 2;
-    let result = Solution::longest_ones(nums, k);
-    println!("Max consecutive 1s (with {} flips): {}", k, result); 
+            while zero > k {
+                if nums[left] == 0{
+                    zero -=1;
+                }
+                left += 1;
+            }
+
+            max_len = max_len.max(right - left + 1);
+            right += 1;
+        }
+        max_len as i32
+
+    }
 }
-//First dat took me understand the que &next day thanks
-//i have to see the code ; i cant solve this with my given method so im taking help Ai 
