@@ -1,64 +1,42 @@
-use std::{fmt::Debug, rc::Rc};
+use std::{cell::RefCell, fmt::Debug, rc::Rc};
 #[allow(dead_code)]
 struct Node<T> {
     value: T,
-    next: Option<Rc<Node<T>>>,
-    prev: Option<Rc<Node<T>>>,
+    next: Option<Box<Node<T>>>,
 }
 
-impl<T> Node<T> {
-    fn new(value: T) -> Self {
-        Self {
-            value: value,
-            next: None,
-            prev: None,
-        }
-    }
-}
-struct Deque<T> {
-    begin: Option<Rc<Node<T>>>,
-    end: Option<Rc<Node<T>>>,
+pub struct LinkedList<T> {
+    head: Option<Box<Node<T>>>,
 }
 
-impl<T> Deque<T>
-where
-    T: Debug,
-{
-    fn new() -> Self {
-        Self {
-            begin: None,
-            end: None,
-        }
+impl<T> LinkedList<T> {
+    pub fn new() -> Self {
+        LinkedList { head: None }
     }
-
-    fn push_front(&mut self, value: T) {
-        if let Some(node) = &mut &self.begin {
-            todo!()
-        } else {
-            assert!(self.end.is_none());
-            let mut new_node = Rc::new(Node::new(value));
-            self.begin = Some(new_node.clone());
-            self.end = Some(new_node.clone());
-        }
-    }
-
-    fn push_back(&mut self, value: T) {
-        todo!()
-    }
-
-    fn bug_debug(&self) {
-        let mut iter = &self.begin;
-        while let Some(node) = iter {
-            print!("{:?} ", node.value);
-            iter = &node.next;
-        }
-        println!("")
-    }
+       pub fn is_empty(&self) -> bool {
+        self.head.is_none()
 }
+
+  pub fn pop_front(&mut self) -> Option<T> {
+        self.head.take().map(|old_head| {
+            self.head = old_head.next;
+            old_head.value
+        })
+    }
 
 fn main() {
-    let mut data = Deque::<String>::new();
-    data.push_front("10".to_string());
-    data.push_back("20".to_string());
-    data.push_front("30".to_string());
+    let mut list = LinkedList::new();
+    assert!(list.is_empty());
+    list.push_front(10);
+    list.push_front(20);
+    list.push_front(30);
+    list.print(); 
+    println!("peek = {:?}", list.peek()); 
+
+    // POP THE DATA
+    println!("pop = {:?}", list.pop_front());
+    println!("pop = {:?}", list.pop_front()); 
+    println!("pop = {:?}", list.pop_front()); 
+    println!("pop = {:?}", list.pop_front()); 
+    list.print();
 }
