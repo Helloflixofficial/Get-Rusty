@@ -32,16 +32,55 @@ impl Tree {
     }
 
     fn insert(&mut self, value: i32) {
-        match &mut self.root {
-            None => {
-                self.root = Node::new(value).into();
-            }
-            Some(node) => {
-                Tree::insert_recursive(node, value);
+        // match &mut self.root {
+        //     None => {
+        //         self.root = Node::new(value).into();
+        //     }
+
+        //     Some(node) => {
+        //         Tree::insert_recursive(node, value);
+        //     }
+        // }
+        self.insert_iterative(value);
+    }
+
+    //secount one
+
+    fn insert_iterative(&mut self, value: i32) {
+        if self.root.is_none() {
+            self.root = Node::new(value).into();
+            return;
+        }
+        let mut q: Vec<&mut Box<Node>> = Vec::new();
+        let root = self.root.as_mut().unwrap();
+        q.push(root);
+
+        while let Some(node) = q.pop() {
+            if value > node.value {
+                let right = &mut node.right;
+                match right {
+                    None => {
+                        *right = Node::new(value).into();
+                    }
+                    Some(n) => {
+                        q.push(n);
+                    }
+                }
+            } else if value < node.value {
+                let left = &mut node.left;
+                match left {
+                    None => {
+                        *left = Node::new(value).into();
+                    }
+                    Some(n) => {
+                        q.push(n);
+                    }
+                }
             }
         }
     }
 
+    /////////// first one
     fn insert_recursive(node: &mut Box<Node>, value: i32) {
         if value > node.value {
             match &mut node.right {
@@ -64,13 +103,11 @@ impl Tree {
         }
     }
 }
-
 #[cfg(test)]
-mod test1 {
+mod tests {
     use super::*;
-
     #[test]
-    fn it_works_as_tree() {
+    fn work_builds_tree() {
         let mut tree = Tree::new();
         tree.insert(8);
         tree.insert(10);
@@ -81,38 +118,8 @@ mod test1 {
         tree.insert(7);
         tree.insert(14);
         tree.insert(13);
-
+        tree.insert(v);
         assert_eq!(tree.root.is_some(), true);
         println!("{:?}", tree);
     }
 }
-
-
-
-// fn inorder(&self) -> Vec!(i32) {
-//     if self.root.is_none() {
-//         return Vec::new();
-//     }
-//     let mut result: Vec<i32> = Vec::new();
-//     let root = seflf.root.as_ref().unwrap(); Tree::traverse_inorder_recursive(values, root);
-
-
-// }
-
-
-
-
-// #test[cfg(derive)]
-// fn works(){
-//     let mut tree = Tree::new();
-//     tree.insert(8)
-//     tree.insert(10)
-//     tree.insert(3)
-//     tree.insert(1)
-//     tree.insert(6)
-//     tree.insert(4)
-//     tree.insert(7)
-//     tree.insert(14)
-//     tree.insert(13)
-//     assert_eq(tree.inorder(),vec![1,3,4,6,7,8,10,13,14]);
-// }
